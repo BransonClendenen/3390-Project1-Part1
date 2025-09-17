@@ -1,20 +1,14 @@
 [gd_scene format=3 uid="uid://r48qaatsao35"]
 
-[node name="Scene" type="Control"]
-layout_mode = 3
-anchors_preset = 0
+[node name="Scene1" type="Node2D"]
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+custom_minimum_size = Vector2(1152, 648)
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "LEL"
-
-[node name="Label2" type="Label" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "lel 2 boogaloo
-"
+[node name="Button" type="Button" parent="CenterContainer"]
+custom_minimum_size = Vector2(600, 300)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Hello"
