@@ -1,9 +1,34 @@
 [gd_scene load_steps=2 format=3 uid="uid://dacc7eh0ougjk"]
 
-[ext_resource type="Texture2D" uid="uid://cwat3llj71arm" path="res://icon.svg" id="1_tjqxy"]
+[ext_resource type="Script" uid="uid://dxdnfhyw8dai8" path="res://Scripts/2to1.gd" id="1_tjqxy"]
 
 [node name="Scene2" type="Node2D"]
+script = ExtResource("1_tjqxy")
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(88, 79)
-texture = ExtResource("1_tjqxy")
+[node name="CenterContainer" type="Control" parent="."]
+custom_minimum_size = Vector2(1152, 648)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Label" type="Label" parent="CenterContainer"]
+layout_mode = 2
+offset_left = 428.0
+offset_top = 100.0
+offset_right = 724.0
+offset_bottom = 241.0
+theme_override_font_sizes/font_size = 50
+text = "Hello World!
+"
+
+[node name="Button" type="Button" parent="CenterContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+offset_left = 476.0
+offset_top = 400.0
+offset_right = 676.0
+offset_bottom = 500.0
+text = "Ok"
+
+[connection signal="pressed" from="CenterContainer/Button" to="." method="_on_button_pressed"]
